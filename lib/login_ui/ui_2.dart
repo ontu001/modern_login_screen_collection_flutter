@@ -91,23 +91,37 @@ class LoginUITwo extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 40,),
-                        Text('Forgot password?',style: TextStyle(color: Colors.grey),),
-                        SizedBox(height: 40,),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Text(
+                          'Forgot password?',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
                         Container(
                           height: 50,
                           margin: EdgeInsets.symmetric(horizontal: 50),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.purpleAccent
-                          ),
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.purpleAccent),
                           child: Center(
-                            child: Text('Sign Up',style: TextStyle(fontSize: 15,color: Colors.white),),
+                            child: Text(
+                              'Sign Up',
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.white),
+                            ),
                           ),
                         ),
-                        SizedBox(height: 100,),
+                        SizedBox(
+                          height: 100,
+                        ),
                         Text('Or sign in with'),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -116,39 +130,51 @@ class LoginUITwo extends StatelessWidget {
                               width: 100,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Colors.blueAccent
-                              ),
+                                  color: Colors.blueAccent),
                               child: Center(
-                                child: Text('Google',style: TextStyle(fontSize: 15,color: Colors.white),),
+                                child: Text(
+                                  'Google',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.white),
+                                ),
                               ),
                             ),
-                            SizedBox(width: 20,),
+                            SizedBox(
+                              width: 20,
+                            ),
                             Container(
                               height: 50,
                               width: 100,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Colors.black
-                              ),
+                                  color: Colors.black),
                               child: Center(
-                                child: Text('Github',style: TextStyle(fontSize: 15,color: Colors.white),),
+                                child: Text(
+                                  'Github',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.white),
+                                ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 80,),
+                        SizedBox(
+                          height: 50,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Not a member?'),
                             GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   print('Clicked');
                                 },
-                                child: Text(' Register Now',style: TextStyle(color: Colors.blue),)),
+                                child: Text(
+                                  ' Register Now',
+                                  style: TextStyle(color: Colors.blue),
+                                )),
                           ],
                         ),
-
                       ],
                     ),
                   ),
