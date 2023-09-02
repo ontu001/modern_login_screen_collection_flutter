@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +11,7 @@ Widget MyButton(String title , onPressed) {
       onPressed: onPressed,
       child: Text(title),
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.black),
+        backgroundColor: MaterialStateProperty.all(Colors.purple),
         textStyle: MaterialStateProperty.all(TextStyle(fontSize: 16)),
       ),
     ),
