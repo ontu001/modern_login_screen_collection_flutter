@@ -4,9 +4,17 @@ import 'package:modern_login_screen_collection_flutter/widgets/my_button2.dart';
 import 'package:modern_login_screen_collection_flutter/widgets/sign_option.dart';
 import 'package:modern_login_screen_collection_flutter/widgets/simple_filed.dart';
 
-class LoginUIthree extends StatelessWidget {
+class LoginUIthree extends StatefulWidget {
+  @override
+  State<LoginUIthree> createState() => _LoginUIthreeState();
+}
+
+class _LoginUIthreeState extends State<LoginUIthree> {
   final userNameController = TextEditingController();
+
   final passwordController = TextEditingController();
+
+  bool rememberUser = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +30,9 @@ class LoginUIthree extends StatelessWidget {
                   image: NetworkImage(
                     'https://images.pexels.com/photos/1816714/pexels-photo-1816714.jpeg?auto=compress&cs=tinysrgb&w=1600',
                   ),
-                  fit: BoxFit.cover)),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      Colors.purple.withOpacity(0.5), BlendMode.dstATop))),
           child: Column(children: [
             Padding(
               padding: EdgeInsets.only(bottom: 80),
@@ -46,6 +56,8 @@ class LoginUIthree extends StatelessWidget {
                 ],
               ),
             ),
+
+            //login input part
             Expanded(
                 child: Container(
               width: double.infinity,
@@ -83,14 +95,29 @@ class LoginUIthree extends StatelessWidget {
                         obsecureText: true,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Align(
-                          alignment: Alignment.topRight,
-                          child: Text(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(
+                                  value: rememberUser,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      rememberUser = value!;
+                                    });
+                                  }),
+                              Text('Remember me')
+                            ],
+                          ),
+                          Text(
                             'Forget Password?',
                             style: TextStyle(color: Colors.purple),
-                          )),
+                          )
+                        ],
+                      ),
                       SizedBox(
                         height: 50,
                       ),
