@@ -11,7 +11,6 @@ class LoginUIthree extends StatefulWidget {
 
 class _LoginUIthreeState extends State<LoginUIthree> {
   final userNameController = TextEditingController();
-
   final passwordController = TextEditingController();
 
   bool rememberUser = false;
@@ -91,7 +90,7 @@ class _LoginUIthreeState extends State<LoginUIthree> {
                       SimpleForm(
                         controller: passwordController,
                         hintText: 'Password',
-                        suffixIcon: Icon(Icons.password_outlined),
+                        suffixIcon: Icon(Icons.remove_red_eye_outlined),
                         obsecureText: true,
                       ),
                       SizedBox(
